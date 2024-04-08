@@ -31,9 +31,9 @@ export const HitAndBlow = (props) => {
         {isCorrect && "おめでとう"}
       </div>
       {isCorrect && 
-      <Button 
-        color="default"
-        variant="outlined"
+      <Button
+        bg="tomato" 
+        color="white"
         onClick={props.clickNewGame}
         style={{margin: "20px auto"}}>
           もう一度する</Button>}

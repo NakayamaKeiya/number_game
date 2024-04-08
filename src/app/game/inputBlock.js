@@ -38,7 +38,9 @@ export const InputBlock = (props) => {
         );
       })}
       {!checkFilledAnswer() && (
-        <Button           
+        <Button
+        color="white"
+        backgroundColor="tomato"           
         variant="outlined"
         className="reset-button"
         onClick={props.checkAnswer} 

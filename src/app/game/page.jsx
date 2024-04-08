@@ -7,7 +7,7 @@ import { HitAndBlow } from "./hitAndBlow";
 import { makeAnswer } from "./answer";
 
 // import styled from 'styled-components';
-import { Button } from '@chakra-ui/react'
+import { Box, Button } from '@chakra-ui/react'
 
 
   const HitBlow = () => {
@@ -80,9 +80,10 @@ import { Button } from '@chakra-ui/react'
     }, []);
 
     return (
-      <>
+      <Box backgroundColor="#F4F1F1" w="100%" h="100vh">
         <Button
-          color="primary"
+          color="white"
+          backgroundColor="tomato"
           variant="outlined"
           className="reset-button"
           onClick={startNewGame} >リセットゲーム</Button>
@@ -92,7 +93,7 @@ import { Button } from '@chakra-ui/react'
           setActiveBlock={onSetActiveBlock}
           checkAnswer={onCheckAnswer}
         />
-        <div style={{ display: "flex", textAlign: "center", justifyContent: "center", marginLeft: "100px" }}>
+        <Box style={{ display: "flex", textAlign: "center", justifyContent: "center", marginLeft: "100px" }}>
           <div style={{ width: "30%", marginTop: "5px" }}>
             <NumberBlock
               onInputNumber={onInputAnswer}
@@ -116,8 +117,8 @@ import { Button } from '@chakra-ui/react'
               answerHistories={answerHistories}
             />
           </div>
-        </div>
-      </>
+        </Box>
+      </Box>
     );
   }
 
