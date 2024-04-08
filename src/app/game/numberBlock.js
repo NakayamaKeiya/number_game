@@ -5,7 +5,7 @@ export const NumberBlock = (props) => {
   const wrapper = {
     display: "flex",
     flexWrap: "wrap",
-    width: "200px"
+    width: "150px"
   };
   const item = {
     width: "50px",

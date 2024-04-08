@@ -80,21 +80,15 @@ import { Box, Button } from '@chakra-ui/react'
     }, []);
 
     return (
-      <Box backgroundColor="#F4F1F1" w="100%" h="100vh">
-        <Button
-          color="white"
-          backgroundColor="tomato"
-          variant="outlined"
-          className="reset-button"
-          onClick={startNewGame} >リセットゲーム</Button>
+      <Box backgroundColor="#F4F1F1" w="100%" h="100vh"overflow="hidden">
         <InputBlock
           numbers={userAnswer}
           activeBlock={activeBlock}
           setActiveBlock={onSetActiveBlock}
           checkAnswer={onCheckAnswer}
         />
-        <Box style={{ display: "flex", textAlign: "center", justifyContent: "center", marginLeft: "100px" }}>
-          <div style={{ width: "30%", marginTop: "5px" }}>
+        <Box display="flex" textAlign="center" justifyContent="center" >
+          <Box  marginTop="2.5%"marginRight="2.5%">
             <NumberBlock
               onInputNumber={onInputAnswer}
               onInputPrev={() => {
@@ -110,14 +104,25 @@ import { Box, Button } from '@chakra-ui/react'
               userAnswer={userAnswer}
               blockStatus={blockStatus}
             />
-          </div>
-          <div>
+          </Box>
+          <Box border="0.5px solid">
             <HitAndBlow
               clickNewGame={startNewGame}
               answerHistories={answerHistories}
             />
-          </div>
+          </Box>
         </Box>
+        <Box display="flex" textAlign="center" justifyContent="center" marginTop="2.5%">
+        <Button
+          margin="0"
+          color="white"
+          backgroundColor="tomato"
+          className="reset-button"
+          onClick={startNewGame} >リセットゲーム
+        </Button>
+
+        </Box>
+        
       </Box>
     );
   }
